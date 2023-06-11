@@ -112,6 +112,8 @@
 		return
 	var/turf/T = get_turf(usr)
 	var/fail = FALSE
+	if(istype(T, /turf/closed/shuttle))
+		fail = TRUE
 	if(T.density)
 		fail = TRUE
 	else
